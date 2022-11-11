@@ -1,52 +1,39 @@
 #include <stdio.h>
+#include <math.h>
+#include <stdbool.h>
 #include <windows.h>
-int main(){
- 
-    int d,resp,dep;
-	float s,in,ir;
-    do{
-    	
-	printf("Inserir o valor dos Proventos\n");
-	scanf("%f",&s);
-	system("cls");
-	printf("Inserir os dias de ferias no mes\n");
-	scanf("%i",&d);
-	system("cls");
-	s=s/30*d;
-	
-	if(s<=1212.00){in=s*0.075;}
-	else if((s>1212.00)&&(s<=2427.35))
-	{in=s*0.09-18.18;}
-	else if((s>2427.35)&&(s<=3641.03))
-	{in=s*0.12-91.00;}
-	else if((s>3641.03)&&(s<=7087.22))
-	{in=s*0.14-163.82;}
-	else if(s>7087.23){in=828.39;}
-	
-	printf("Valor p/ desconto R$%.2f\n\n",in);
-	printf("1 - Caucular INSS\n");
-	printf("2 - Caucular IRRF\n");
-	printf("3 - Sair\n");
-	scanf("%d",&resp);
-	system("cls");
-	
-	}while(resp==1);
-	
-	if(resp==2){
-	printf("Informe o numero de dependentes do funcionario\n");
-	scanf("%i",&dep);
-	dep=189.89*dep;}
-	else
-	if((s>1903.99) && ( s<=2826.65))
-	{ir=s*0.075-in-dep-142.80;}
-	else if((s>2826.66) && (s<=3754.05))
-	{ir=s*0.15-in-dep-354.80;}
-	else if((s>3751.06) && (s<=4664.68))
-	{ir=s*0.225-in-dep-636.13;}
-	else if(s>4664.68)
-	{ir=s*0.275-in-dep-869.36;}
 
-	printf("Valor p/ desconto IRRF R$%.2f\n\n",ir);
-	
-	return 0;
-} 
+int main() {
+    int dias, resp;
+    float salario, inss;
+    do{
+    printf(" Insira o valor dos proventos\n");
+    scanf("%f",&salario);
+    system("cls");
+    printf("Insira a quantidade de dias de ferias no mes de saida\n");
+    scanf("%i",&dias);
+    system("cls");
+    salario=salario/30*dias;
+    if(salario<=1212.00){
+        inss=salario*0.075;
+    }
+    else if((salario>1212.00) && (salario<=2427.35)){
+        inss=salario*0.09-18.18;
+    }
+    else if((salario>2427.35) && (salario<=3641.03)){
+        inss=salario*0.12-91.00;
+    }
+    else if((salario>3641.03) && (salario<=7087.22)){
+        inss=salario*0.14-163.82;
+    }
+    else if(salario>7087.23){
+        inss=828.39;
+    }
+    printf("O valor a descontar de INSS e R$%.2f\n\n",inss);
+    printf("(1)- Caucular novamente\n");
+    printf("(2)- Sair\n");
+    scanf("%d", &resp);
+    system("cls");
+   }while (resp==1);
+    return 0;
+}
