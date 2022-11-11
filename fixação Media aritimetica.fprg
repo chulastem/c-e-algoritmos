@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dp007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-27 10:45:06 "/>
+        <attribute name="created" value="ZHAwMDc7RFAwMDc7MjAyMi0wNS0yNzsiMTA6MzQ6NDAgIjsxODQ5"/>
+        <attribute name="edited" value="ZHAwMDc7RFAwMDc7MjAyMi0wNS0yNzsiMTA6NDU6MDYgIjsxOzE5NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1, n2, media" type="Real" array="False" size=""/>
+            <output expression="&quot;Escreva o primeiro valor para descobrir a m&#233;dia aritimetica&quot;" newline="True"/>
+            <input variable="n1"/>
+            <output expression="&quot;Escreva o segundo valor&quot;" newline="True"/>
+            <input variable="n2"/>
+            <assign variable="media" expression="(n1+n2)/2"/>
+            <output expression="&quot;M&#233;dia =&quot; &amp; media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

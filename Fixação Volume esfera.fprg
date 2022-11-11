@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="dp007"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-05-27 10:55:49 "/>
+        <attribute name="created" value="ZHAwMDc7RFAwMDc7MjAyMi0wNS0yNzsiMTA6NDU6MTcgIjsxODU1"/>
+        <attribute name="edited" value="ZHAwMDc7RFAwMDc7MjAyMi0wNS0yNzsiMTA6NTU6NDkgIjsxOzE5Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="volume, raio" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite o valor de R para descobrir o volume de sua esfera&quot;" newline="True"/>
+            <input variable="raio"/>
+            <assign variable="volume" expression="(4*3.1415*raio^3)/3"/>
+            <output expression="&quot;Volume =&quot; &amp; volume" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
